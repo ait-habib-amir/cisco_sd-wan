@@ -14,24 +14,6 @@ The setup allows for:
 - Performance and connectivity testing with iperf
 - Monitoring through Cisco vManage GUI
 
-## Architecture
-
-```mermaid
-graph TD
-  Host[Host OS (Linux)]
-  subgraph SD-WAN VMs
-    vEdge[vEdge]
-    vSmart[vSmart]
-    vBond[vBond]
-    vManage[vManage]
-  end
-  Host --- vEdge
-  Host --- vSmart
-  Host --- vBond
-  Host --- vManage
-  Host --> Bridges[Linux bridges & TAP interfaces]
-
-
 
 ## Features
 
