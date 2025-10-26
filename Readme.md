@@ -16,13 +16,21 @@ The setup allows for:
 
 ## Architecture
 
-Host OS
-├── vEdge
-├── vSmart
-├── vBond
-└── vManage
-│
-└── Linux bridges & TAP interfaces
+```mermaid
+graph TD
+  Host[Host OS (Linux)]
+  subgraph SD-WAN VMs
+    vEdge[vEdge]
+    vSmart[vSmart]
+    vBond[vBond]
+    vManage[vManage]
+  end
+  Host --- vEdge
+  Host --- vSmart
+  Host --- vBond
+  Host --- vManage
+  Host --> Bridges[Linux bridges & TAP interfaces]
+
 
 
 ## Features
